@@ -217,7 +217,7 @@ with col1:
     })
     
     # Pastikan urutan fitur sesuai
-    input_data = input_data[features]
+    input_data = input_data.reindex(columns=features, fill_value=0)
     
     st.dataframe(input_data, use_container_width=True)
 
